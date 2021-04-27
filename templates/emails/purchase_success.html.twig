@@ -1,0 +1,18 @@
+<h1>Commande n°{{purchase.id}}
+	validée</h1>
+<b>
+	<i>Votre commande n°{{purchase.id}}
+		d'un montant total de
+		{{purchase.total}}
+		a été validée avec succès</i>
+</b>
+<p>Liste des produits:
+</p>
+<ul>
+	{% for item in purchase.purchaseItems %}
+		<li>{{item.quantity}}
+			x
+			{{item.productName}}
+			({{item.productPrice}})</li>
+	{% endfor %}
+</ul>
